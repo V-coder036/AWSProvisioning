@@ -82,7 +82,7 @@ resource "aws_security_group" "ec2_security_group" {
 resource "aws_instance" "ec2_instance" {
   ami           = "ami-0a6dec2cb63ea0eee"  
   instance_type = var.ec2_instance_type
-  key_name      = "newbbprod"             # Replace with the desired key
+  key_name      = var.ec2_key_pair_name
   subnet_id     = aws_subnet.subnet1.id
 
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
@@ -196,5 +196,5 @@ resource "aws_security_group" "elb_security_group" {
 
 resource "aws_eip_association" "eip_assoc" {
   instance_id   = aws_instance.ec2_instance.id
-  allocation_id = "eipalloc-09e9c19eb568ccbf6"      # Replace with the desired elastic IP allocation ID
+  allocation_id = var.elastiip_allocation_id    
 }
