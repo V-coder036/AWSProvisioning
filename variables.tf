@@ -17,3 +17,8 @@ variable "allowed_ssh_cidr_blocks" {
   description = "Allowed SSH CIDR blocks"
   default     = ["0.0.0.0/0"]  # Add any specific IP addresses or ranges as needed
 }
+
+variable "elastiip_allocation_id" {
+  description = "EC2 key pair name"
+  default     = "elastiip_allocation_id"  # Replace with your elastic ip allocation id
+}
