@@ -10,5 +10,6 @@
 ## Running the Healthcheck Script
 
 1. Ensure you have curl installed on your local machine.
-2. Open a terminal and navigate to the project directory: `cd Devops-Node`
-3. Run the healthcheck script: `./healthcheck.sh`
+2. Open a terminal and navigate to the project directory
+3. Add the ALB domain name to the healthcheck.sh script
+4. Run the healthcheck script: `./healthcheck.sh`
